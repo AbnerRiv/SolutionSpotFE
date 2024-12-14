@@ -1,0 +1,78 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const title = "Nosotros";
+---
+
+<Layout title={title}>
+  <main class="w-full mt-24 mb-2 flex flex-col gap-y-6">
+    <div>
+      <div class="mission-bg-div flex justify-center items-center">
+        <span class="text-[#fff] arimo font-bold text-3xl tracking-wider">
+          Misión
+        </span>
+      </div>
+      <section id="vision" class="pl-2 pt-2.5 text-[#000] text-lg">
+        <p>
+          Fabricamos soluciones integrales de mobiliario de oficina, combinando innovación, diseño, calidad y servicio personalizado, para satisfacer las necesidades específicas de nuestros clientes.
+        </p>
+      </section>
+    </div>
+
+    <div>
+      <div class="vision-bg-div flex justify-center items-center">
+        <span class="text-[#fff] arimo font-bold text-3xl tracking-wider">
+          Visión
+        </span>
+      </div>
+      <section id="vision" class="pl-2 pt-2.5 text-[#000] text-lg">
+        <p>
+          Ser referencia de calidad, como la empresa líder en la fabricación y mantenimiento de mobiliario de oficina, asegurando presencia de nuestros productos, en cada empresa e institución Nicaragüense
+        </p>
+      </section>
+    </div>
+
+    <div>
+      <div class="qualityPolicy-bg-div flex justify-center items-center">
+        <span class="text-[#fff] arimo font-bold text-3xl tracking-wider">
+          Política de Calidad
+        </span>
+      </div>
+      <section id="qualityPolicy" class="pl-2 pt-2.5 text-[#000] text-lg">
+        <p>
+          Asegurar soluciones de mobiliario de oficina que cumplan con los más altos estándares de calidad, funcionalidad y diseño, garantizando la satisfacción total de nuestros clientes. A través de la innovación y mejora continua de nuestros procesos, tecnología y el uso de materiales duraderos y sostenibles, creando entornos de trabajo cómodos, eficientes y adaptados a las necesidades actuales de nuestros clientes
+        </p>
+      </section>
+    </div>
+
+  </main>
+</Layout>
+
+<style scoped>
+  .mission-bg-div{
+    width: 100%; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    background-image: url("../assets/images/headerBgImageUs.jpeg"); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents repeating the image */
+  }
+
+  .vision-bg-div{
+    width: 100%; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    background-image: url("../assets/images/headerBgImageUs.jpeg"); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents repeating the image */
+  }
+
+  .qualityPolicy-bg-div{
+    width: 100%; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    background-image: url("../assets/images/headerBgImageUs.jpeg"); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents repeating the image */
+  }
+</style>

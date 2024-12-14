@@ -1,0 +1,66 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Banner from "@/components/Banner.astro";
+import Features from "@/components/Features.astro";
+import { Image } from "astro:assets";
+import conferenceTable from "@/assets/images/conferenceTable.jpg";
+import Testimonials from "@/components/react/Testimonials";
+
+let featureArr = [
+  "Especialistas en la fabricación de muebles de oficina a medida",
+  "Garantía en todo nuestro producto",
+  "Mantenimiento preventivo y correctivo para tu mobiliario",
+  "Acabados profesionales, elegantes y adaptados a tu presupuesto",
+];
+
+let testimonialArr = [
+  {
+    name: "Lic. Nancy Molina",
+    text: "Trabajar con Servicios Múltiples como proveedor a simplificado la búsqueda ya que ellos  nos han brindado variedad de colores y estilo en sus productos, la mejor parte es que cuentan con personal calificado para diseñar y fabricar al gusto del cliente",
+    photo: "testimonial1.jpg",
+    position: "RR.HH. y Compras",
+    company: "Inauto de Nicaragua",
+  },
+  {
+    name: "Lic. Maria Gonzales",
+    text: "La verdad es que Servicios Múltiples de Nicaragua me ha impresionado bastante. Es que no es solo una tienda de muebles de oficina más, el hecho de que se preocupen tanto por la satisfacción del cliente, hace que trabajar sea mucho más placentero. Se nota que buscan la excelencia y eso para mí, los pone por encima del resto.",
+    photo: "testimonial2.jpg",
+    position: "Compras",
+    company: "Sinsa",
+  },
+  {
+    name: "Lic. Helen Romero",
+    text: "Estoy encantada con el trabajo de Servicios Múltiples. Los muebles a medida que diseñaron para Microparts superaron mis expectativas en calidad y estilo. ¡Recomiendo totalmente sus servicios!",
+    photo: "testimonial3.jpg",
+    position: "Compras",
+    company: "Microparts",
+  }
+];
+---
+
+<Layout title="Inicio">
+  <main class="w-full flex flex-col items-center">
+    <section class="w-full">
+      <Banner />
+      <section class="flex flex-col md:flex-row md:flex-nowrap mt-2 mb-3">
+        <Features featureArr={featureArr} />
+        <Image
+          src={conferenceTable}
+          class={"w-[100%] h-[500px] object-cover image-object-poistion"}
+          alt={"logo"}
+        />
+      </section>
+    </section>
+    <Testimonials
+      testimonials={testimonialArr}
+      title={"Testimonios"}
+      client:load
+    />
+  </main>
+
+  <style scoped>
+    .image-object-poistion {
+      object-position: 0 36%;
+    }
+  </style>
+</Layout>

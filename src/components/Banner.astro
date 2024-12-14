@@ -1,0 +1,29 @@
+---
+import CallToAction from "@/components/CallToAction.astro";
+---
+
+<section class="w-full" id="first-section">
+  <div class="background-div relative">
+    <CallToAction
+      body="Contamos con un stock amplio de escritorios, muebles de oficina, línea de almacenaje, sillas, y línea de hogar"
+      buttonText="Descargar Catálogo "
+    />
+  </div>
+</section>
+
+<style scoped>
+  .background-div {
+    width: 100%; /* Adjust the width as needed */
+    height: 700px; /* Adjust the height as needed */
+    background-image: url("../assets/images/banner.webp"); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: 25.5% 90%; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+  }
+
+  @media screen and (min-width:768px) {
+    .border-left-cus{
+      background-position: 60% 90%; /* Centers the image */
+    }
+  }
+</style>
